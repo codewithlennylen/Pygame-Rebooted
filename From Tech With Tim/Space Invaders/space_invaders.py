@@ -115,6 +115,9 @@ def main():
 
     while run:
         clock.tick(FPS)
+
+        if lives <= 0 or player.health <= 0:
+            lost = True
         
         # increase enemies when enemies end
         if len(enemies) == 0:
